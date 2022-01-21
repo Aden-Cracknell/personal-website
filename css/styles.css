@@ -1,0 +1,189 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Custom Properties */
+:root {
+  /* Font family */
+  --ff-primary: "Source Sans Pro", sans-serif;
+  /* --ff-primary: Silka, Roboto, sans-serif; */
+  --ff-secondary: "Source Code Pro", monospace;
+
+  /* Font weights */
+  --fw-reg: 300;
+  --fw-bold: 900;
+
+  /* Colours */
+  /* Inspiration https://in-team.com.pl/ */
+  --clr-light: #fff;
+  --clr-dark: #0a1c2e;
+  --clr-accent: #08c873;
+  --clr-light-secondary: #f6f9fb;
+  --clr-accent-secondary: #fee27f;
+
+  /* Font sizes */
+  --fs-h1: 3rem;
+  --fs-h2: 2.25rem;
+  --fs-h3: 1.25rem;
+  --fs-body: 1rem;
+
+  /* Box shadow */
+  --bs: 0.25em 0.25em 0.75em rgba(0,0,0,0.25);
+}
+
+@media (min-width: 800px) {
+  :root {
+    --fs-h1: 4.5rem;
+    --fs-h2: 3.75rem;
+    --fs-h3: 1.5rem;
+    --fs-body: 1.125rem;
+  }
+}
+
+/* General Styles */
+body {
+  background-color: var(--clr-light);
+  color: var(--clr-dark);
+  margin: 0;
+  font-family: var(--ff-primary);
+  font-size: var(--fs-body);
+  line-height: 1.6;
+}
+
+section {
+    padding: 5em 2em;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* Typography */
+h1,
+h2,
+h3 {
+  line-height: 1;
+  margin: 0;
+}
+
+h1 {
+  font-size: var(--fs-h1);
+}
+h2 {
+  font-size: var(--fs-h2);
+}
+h3 {
+  font-size: var(--fs-h3);
+}
+
+strong {
+  font-weight: var(--fw-bold);
+}
+
+.section__title {
+    margin-bottom: 0.25em;
+}
+
+.section__title--intro {
+  font-weight: var(--fw-reg);
+}
+
+.section__title--intro strong{
+    display: block;
+  }
+
+.section__subtitle {
+  margin: 0;
+  font-size: var(--fs-h3);
+}
+
+.section__subtitle--intro {
+  background: var(--clr-accent-secondary);
+  font-family: var(--ff-secondary);
+  margin-bottom: 1em;
+  display: inline-block;
+}
+
+.section__subtitle--about {
+    background: var(--clr-accent);
+    font-family: var(--ff-secondary);
+}
+
+/* Nav */
+nav {
+    display: none;
+}
+
+/* Intro section */
+.intro {
+    position: relative;
+}
+
+.intro__img {
+    border-radius: 50%;
+    box-shadow: var(--bs);
+}
+
+.intro__circle {
+    position: absolute;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.intro__circle--1 {
+    background-color: var(--clr-accent);
+    height: 150px;
+    width: 150px;
+    top: 16%;
+    left: -1%;
+}
+
+.intro__circle--2 {
+    background-color: var(--clr-accent-secondary);
+    height: 75px;
+    width: 75px;
+    top: 14%;
+    left: 12%;
+    z-index: -2;
+}
+
+@media (min-width: 600px) {
+    .intro {
+        display: grid;
+        width: min-content;
+        margin: 0 auto;
+        /* gap: 0.25em; */
+        grid-template-areas:
+            "img title"
+            "img subtitle";
+        grid-template-columns: min-content max-content;
+    }
+
+    .intro__img {
+        grid-area: img;
+        min-width: 250px;
+        position: relative;
+        z-index: 2;
+    }
+
+    .section__subtitle--intro {
+        align-self: start;
+        width: 95%;
+        margin-left: auto;
+        /* grid-column: -1 / 1;
+        grid-row: 2; */
+        text-align: right;
+    }
+}
+
+.about-me {
+    background: var(--clr-light-secondary);
+}
+
+.my-projects {
+    background: var(--clr-dark);
+    color: var(--clr-light);
+}

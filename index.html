@@ -1,10 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aden</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
+      integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc="
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
 
-    </head>
-    <body>
-        
-    </body>
+  <body>
+    <header>
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
+          <li class="nav__item"><a href="#" class="nav__link">About me</a></li>
+          <li class="nav__item">
+            <a href="#skills" class="nav__link">Skills</a>
+          </li>
+          <li class="nav__item"><a href="#" class="nav__link">Projects</a></li>
+        </ul>
+      </nav>
+    </header>
 
+    <section class="intro" id="home">
+      <h1 class="section__title section__title--intro">
+        Hi, I'm <strong>Aden Cracknell</strong>
+      </h1>
+      <p class="section__subtitle section__subtitle--intro">
+        software engineer
+      </p>
+      <img src="img/me.png" alt="Hi" class="intro__img"/>
+      <div class="intro__circle intro__circle--1"></div>
+      <div class="intro__circle intro__circle--2"></div>
+    </section>
+
+    <section class="about-me" id="about">
+      <h2 class="section__title section__title--about">About me</h2>
+      <div class="about-me__body">
+        <p class="section__subtitle section__subtitle--about">
+          engineer, traveller, amateur cook
+        </p>
+      </div>
+    </section>
+
+    <section class="my-skills" id="skills">
+      <h2 class="section_title section_title--skills">Skills</h2>
+      <div class="skill">
+        <h3>Front-End Dev</h3>
+      </div>
+      <div class="skill">
+        <h3>Back-End Dev</h3>
+      </div>
+    </section>
+
+    <section class="my-projects" id="projects">
+      <h2 class="section__title>">Projects</h2>
+      <div class="project">
+        <h3>Project 1</h3>
+      </div>
+      <div class="project">
+        <h3>Project 2</h3>
+      </div>
+      <div class="project">
+        <h3>Project 3</h3>
+      </div>
+    </section>
+  </body>
 </html>
