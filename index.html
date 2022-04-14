@@ -23,14 +23,40 @@
 
   <body>
     <header>
+      <button class="header-btn nav-toggle">
+        <svg
+          width="28"
+          height="28"
+          viewBox="0 0 32 32"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path stroke-width="5" d="M32 2.5H0M32 15.5H8M32 27.5H0"></path>
+        </svg>
+      </button>
+      <button class="header-btn nav-toggle-close">
+        <svg
+          width="28"
+          height="28"
+          viewBox="0 0 32 32"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M 20.1781 16.1777 L 32.2846 28.2843 L 28.7491 31.8198 L 16.6426 19.7133 L 4.53604 31.8198 L 1.00051 28.2843 L 13.107 16.1777 L 0.464844 3.53553 L 4.00038 0 L 16.6426 12.6422 L 29.2848 0 L 32.8203 3.53553 L 20.1781 16.1777 Z"
+          ></path>
+        </svg>
+      </button>
       <nav class="nav">
         <ul class="nav__list">
           <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
-          <li class="nav__item"><a href="#" class="nav__link">About me</a></li>
+          <li class="nav__item"><a href="#about" class="nav__link">About me</a></li>
           <li class="nav__item">
             <a href="#skills" class="nav__link">Skills</a>
           </li>
-          <li class="nav__item"><a href="#" class="nav__link">Projects</a></li>
+          <li class="nav__item"><a href="#projects" class="nav__link">Projects</a></li>
         </ul>
       </nav>
     </header>
@@ -42,17 +68,19 @@
       <p class="section__subtitle section__subtitle--intro">
         software engineer
       </p>
-      <img src="img/me.png" alt="Hi" class="intro__img"/>
+      <img src="img/me.png" alt="Hi" class="intro__img" />
       <div class="intro__circle intro__circle--1"></div>
       <div class="intro__circle intro__circle--2"></div>
     </section>
 
     <section class="about-me" id="about">
-      <h2 class="section__title section__title--about">About me</h2>
-      <div class="about-me__body">
-        <p class="section__subtitle section__subtitle--about">
-          engineer, traveller, amateur cook
-        </p>
+      <div class="about-me-container">
+        <h2 class="section__title section__title--about">About me</h2>
+        <div class="about-me__body">
+          <p class="section__subtitle section__subtitle--about">
+            engineer, traveller, amateur cook
+          </p>
+        </div>
       </div>
     </section>
 
@@ -78,5 +106,7 @@
         <h3>Project 3</h3>
       </div>
     </section>
+
+    <script src="js/index.js"></script>
   </body>
 </html>
